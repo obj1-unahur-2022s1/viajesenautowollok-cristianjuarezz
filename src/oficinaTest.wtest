@@ -1,0 +1,21 @@
+import oficina.*
+import remiseras.*
+import clientes.*
+
+
+test "Viaje de Ana de 10km" {
+	anaMaria.setBienEconomicamente()
+	anaMaria.setPesoElKilometro()	
+	oficina.asignarRemiseras(roxana,juana)
+	assert.equals(juana,oficina.remiseraElegidaParaViaje(anaMaria,10))
+}
+test "Viaje de Teresa de 7km" {
+	oficina.asignarRemiseras(roxana,juana)
+	assert.equals(roxana,oficina.remiseraElegidaParaViaje(teresa,7))
+
+}
+test "Viaje de Teresa de 10km" {
+	oficina.asignarRemiseras(roxana,juana)
+	assert.equals(roxana,oficina.remiseraElegidaParaViaje(teresa,10))
+
+}
